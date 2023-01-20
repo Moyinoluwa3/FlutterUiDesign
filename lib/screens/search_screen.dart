@@ -127,33 +127,79 @@ class SearchScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
+                    Stack(
+                      children: [
+                        Container(
+                          width: size.width * 0.44,
+                          height: AppLayout.getHeight(174),
+                          padding: EdgeInsets.symmetric(
+                              vertical: AppLayout.getHeight(15),
+                              horizontal: AppLayout.getHeight(15)),
+                          decoration: BoxDecoration(
+                              color: const Color(0xFF3ABBBB),
+                              borderRadius: BorderRadius.circular(
+                                  AppLayout.getHeight(18))),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Discount\nfor survey",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Gap(AppLayout.getHeight(10)),
+                              Text(
+                                "Take the survey about our services and get a discount",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                    fontSize: 18),
+                              )
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                            right: -45,
+                            top: -40,
+                            child: Container(
+                              padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      width: 18,
+                                      color: const Color(0xFF189999)),
+                                  color: Colors.transparent),
+                            ))
+                      ],
+                    ),
+                    Gap(AppLayout.getHeight(15)),
                     Container(
                       width: size.width * 0.44,
-                      height: AppLayout.getHeight(174),
+                      height: AppLayout.getHeight(210),
                       padding: EdgeInsets.symmetric(
                           vertical: AppLayout.getHeight(15),
                           horizontal: AppLayout.getHeight(15)),
                       decoration: BoxDecoration(
-                          color: const Color(0xFF3ABBBB),
                           borderRadius:
-                              BorderRadius.circular(AppLayout.getHeight(18))),
+                              BorderRadius.circular(AppLayout.getHeight(18)),
+                          color: const Color(0xFFEC6545)),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Discount\nfor survey",
+                            "Take Love",
                             style: Styles.headLineStyle2.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Gap(AppLayout.getHeight(10)),
-                          Text(
-                            "Take the survey about our services and get a discount",
-                            style: Styles.headLineStyle2.copyWith(
-                                fontWeight: FontWeight.w500,
                                 color: Colors.white,
-                                fontSize: 18),
-                          )
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                          Gap(AppLayout.getHeight(5)),
+                          RichText(
+                              text: const TextSpan(children: [
+                            TextSpan(text: 'm', style: TextStyle(fontSize: 38)),
+                            TextSpan(text: 'o', style: TextStyle(fontSize: 50)),
+                            TextSpan(text: 'n', style: TextStyle(fontSize: 38)),
+                          ]))
                         ],
                       ),
                     )
