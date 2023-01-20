@@ -84,7 +84,83 @@ class SearchScreen extends StatelessWidget {
             ),
             Gap(AppLayout.getHeight(40)),
             const AppDoubleTextWidget(
-                bigText: "Upcoming Flights", smallText: "View all")
+                bigText: "Upcoming Flights", smallText: "View all"),
+            Gap(AppLayout.getHeight(15)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: AppLayout.getHeight(400),
+                  width: size.width * 0.42,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getHeight(15),
+                      vertical: AppLayout.getWidth(15)),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getHeight(20)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade200,
+                            blurRadius: 1,
+                            spreadRadius: 1),
+                      ]),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: AppLayout.getHeight(190),
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(12)),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                    "assets/assets/images/sit.jpg"))),
+                      ),
+                      Gap(AppLayout.getHeight(12)),
+                      Text(
+                        "20% discount on the early booking of this flight, Don't miss.",
+                        style: Styles.headLineStyle2,
+                      )
+                    ],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      width: size.width * 0.44,
+                      height: AppLayout.getHeight(174),
+                      padding: EdgeInsets.symmetric(
+                          vertical: AppLayout.getHeight(15),
+                          horizontal: AppLayout.getHeight(15)),
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF3ABBBB),
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(18))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Discount\nfor survey",
+                            style: Styles.headLineStyle2.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          Gap(AppLayout.getHeight(10)),
+                          Text(
+                            "Take the survey about our services and get a discount",
+                            style: Styles.headLineStyle2.copyWith(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                                fontSize: 18),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
           ]),
     );
   }

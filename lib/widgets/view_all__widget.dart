@@ -15,7 +15,7 @@ class AppDoubleTextWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(bigText, style: Styles.headLineStyle2),
+        Text(bigText, style: Styles.headLineStyle),
         InkWell(
           onTap: () {
             log("You are tapped");
